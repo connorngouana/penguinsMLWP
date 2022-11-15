@@ -113,7 +113,10 @@
 <div class="section level2">
 <h2 id="download-data-from-a-url">Download data from a URL<a class="anchor" aria-label="anchor" href="#download-data-from-a-url"></a>
 </h2>
-<p>You can also get this penguin data directly from the Environmental Data Initiative (EDI) using the R code below. Thanks to <a href="http://brunj7.github.io/about/" class="external-link">Julien Brun</a> for the reminder and code below to access &amp; combine them (will get you same data as <code>penguins_raw</code>):</p>
+<p>You can also get this penguin data directly from the Environmental
+Data Initiative (EDI) using the R code below. Thanks to <a href="http://brunj7.github.io/about/" class="external-link">Julien Brun</a> for the reminder
+and code below to access &amp; combine them (will get you same data as
+<code>penguins_raw</code>):</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Adelie penguin data from: https://doi.org/10.6073/pasta/abc50eed9138b75f54eaada0841b9b86</span></span>
 <span></span>
@@ -130,7 +133,7 @@
 <span><span class="va">uris</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="va">uri_adelie</span>, <span class="va">uri_gentoo</span>, <span class="va">uri_chinstrap</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># Downloading and importing data</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="http://purrr.tidyverse.org" class="external-link">purrr</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://purrr.tidyverse.org/" class="external-link">purrr</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://readr.tidyverse.org" class="external-link">readr</a></span><span class="op">)</span></span>
 <span><span class="va">penguins_lter</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html" class="external-link">map_dfr</a></span><span class="op">(</span><span class="va">uris</span>, <span class="va">read_csv</span><span class="op">)</span></span></code></pre></div>
 </div>
@@ -153,9 +156,9 @@
 <span><span class="co">#&gt; <span style="color: #949494;">#   `Flipper Length (mm)` &lt;dbl&gt;, `Body Mass (g)` &lt;dbl&gt;, Sex &lt;chr&gt;,</span></span></span>
 <span><span class="co">#&gt; <span style="color: #949494;">#   `Delta 15 N (o/oo)` &lt;dbl&gt;, `Delta 13 C (o/oo)` &lt;dbl&gt;, Comments &lt;chr&gt;, and</span></span></span>
 <span><span class="co">#&gt; <span style="color: #949494;">#   abbreviated variable names ¹​studyName, ²​`Sample Number`, ³​`Individual ID`,</span></span></span>
-<span><span class="co">#&gt; <span style="color: #949494;">#   ⁴​`Clutch Completion`, ⁵​`Culmen Length (mm)`</span></span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># ℹ Use `colnames()` to see all variable names</span></span></span></code></pre></div>
-<p>But if that looks too messy for you, <code><a href="../reference/penguins.html">?penguins</a></code> is simpler and tidier:</p>
+<span><span class="co">#&gt; <span style="color: #949494;">#   ⁴​`Clutch Completion`, ⁵​`Culmen Length (mm)`</span></span></span></code></pre></div>
+<p>But if that looks too messy for you, <code><a href="../reference/penguins.html">?penguins</a></code> is
+simpler and tidier:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">penguins</span><span class="op">)</span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 6 × 8</span></span></span>
